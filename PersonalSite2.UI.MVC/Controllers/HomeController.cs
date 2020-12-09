@@ -11,10 +11,27 @@ namespace PersonalSite2.UI.MVC.Controllers
         }
 
         [HttpGet]
-        [Authorize]
-        public ActionResult About()
+        //[Authorize]
+        public ActionResult Resume()
         {
-            ViewBag.Message = "Your app description page.";
+            ViewBag.Message = "Your resume page.";
+
+            return View();
+        }
+
+
+
+        [HttpGet]
+        public ActionResult Links()
+        {
+            ViewBag.Message = "Your links page.";
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Projects()
+        {
+            ViewBag.Message = "Your projects page.";
 
             return View();
         }
@@ -26,5 +43,7 @@ namespace PersonalSite2.UI.MVC.Controllers
 
             return View();
         }
+
+
     }
 }
